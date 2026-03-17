@@ -147,6 +147,8 @@ UPROGS=\
 	$U/_dorphan\
 	$U/_tree\
 	$U/_procinfo\
+	$U/_trace\
+	$U/_xargs
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
@@ -161,6 +163,10 @@ clean:
         $U/usys.S \
 	$(UPROGS)
 
+test_xargs:
+	@chmod +x user/xargstest.sh
+	@./user/xargstest.sh
+test: test_xargs
 # try to generate a unique GDB port
 GDBPORT = $(shell expr `id -u` % 5000 + 25000)
 # QEMU's gdb stub command line changed in 0.11
