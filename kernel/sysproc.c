@@ -6,6 +6,9 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "vm.h"
+#include "procinfo_s.h"
+
+extern struct proc proc[NPROC];
 
 uint64
 sys_exit(void)
