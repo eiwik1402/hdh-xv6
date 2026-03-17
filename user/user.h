@@ -1,6 +1,8 @@
 #define SBRK_ERROR ((char *)-1)
 
 struct stat;
+struct procinfo;
+int procinfo(int pid, struct procinfo *info);
 
 // system calls
 int fork(void);
