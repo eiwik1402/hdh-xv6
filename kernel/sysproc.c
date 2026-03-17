@@ -110,3 +110,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64 sys_trace(void) {
+ 		int mask;
+  		argint(0, &mask); // Lấy tham số mask từ thanh ghi a0
+  		myproc()->trace_mask = mask;
+ 	 	return 0;
+	}
