@@ -13,7 +13,7 @@ extern uint64 sys_procinfo(void);
 static char *syscall_names[] = {
   "", "fork", "exit", "wait", "pipe", "read", "kill", "exec",
   "fstat", "chdir", "dup", "getpid", "sbrk", "sleep", "uptime",
-  "open", "write", "mknod", "unlink", "link", "mkdir", "close", "trace"
+  "open", "write", "mknod", "unlink", "link", "mkdir", "close", "trace", "procinfo"
 };
 
 // Fetch the uint64 at addr from the current process.
